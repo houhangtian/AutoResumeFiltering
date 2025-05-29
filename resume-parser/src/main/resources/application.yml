@@ -1,0 +1,55 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /resume-parser
+
+spring:
+  application:
+    name: resume-parser
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/resume_db
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+
+# Swagger配置
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
+    swagger:
+      v2:
+        enabled: true
+
+# 日志配置
+logging:
+  level:
+    root: INFO
+    com.peopledaily: DEBUG
+  file:
+    name: logs/resume-parser.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 自定义配置
+resume:
+  parser:
+    # 支持的文件类型
+    supported-formats:
+      - pdf
+      - docx
+    # 文件存储路径
+    storage-path: /data/resumes
+    # 临时文件路径
+    temp-path: /tmp/resumes
+    # 并发处理数
+    concurrent-processing: 5
+    # 超时时间（毫秒）
+    timeout: 30000 

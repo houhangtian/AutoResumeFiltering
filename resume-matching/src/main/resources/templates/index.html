@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>简历智能匹配系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+        .feature-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #0d6efd;
+        }
+        .stats-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        .testimonial-section {
+            padding: 60px 0;
+        }
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-file-earmark-text"></i>
+                简历智能匹配系统
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">功能特点</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">数据统计</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">用户反馈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="login.html">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">智能简历筛选，让招聘更高效</h1>
+                    <p class="lead mb-4">基于人工智能的简历智能匹配系统，帮助HR快速筛选合适人才，提高招聘效率。</p>
+                    <div class="d-flex gap-3">
+                        <a href="login.html" class="btn btn-light btn-lg">立即开始</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg">了解更多</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400" alt="系统展示" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能特点 -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">核心功能</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-search feature-icon"></i>
+                            <h3 class="card-title h4">智能匹配</h3>
+                            <p class="card-text">基于AI算法的简历与职位智能匹配，快速找到最合适的人才。</p>
+                            <a href="match.html" class="btn btn-outline-primary">开始匹配</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-upload feature-icon"></i>
+                            <h3 class="card-title h4">批量处理</h3>
+                            <p class="card-text">支持批量导入简历，自动解析和分类，提高处理效率。</p>
+                            <a href="batch.html" class="btn btn-outline-primary">批量处理</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-card">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-graph-up feature-icon"></i>
+                            <h3 class="card-title h4">数据分析</h3>
+                            <p class="card-text">提供招聘数据分析和可视化，助力招聘决策。</p>
+                            <a href="analysis.html" class="btn btn-outline-primary">查看分析</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 数据统计 -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="text-center mb-5">系统数据</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">处理简历</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">匹配准确率</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">企业用户</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">效率提升</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户反馈 -->
+    <section id="testimonials" class="testimonial-section">
+        <div class="container">
+            <h2 class="text-center mb-5">用户反馈</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/60" alt="用户头像" class="testimonial-avatar">
+                        <h5>张经理</h5>
+                        <p class="text-muted">某科技公司HR</p>
+                        <p>"系统大大提高了我们的招聘效率，简历筛选时间缩短了80%。"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/60" alt="用户头像" class="testimonial-avatar">
+                        <h5>李总监</h5>
+                        <p class="text-muted">某互联网公司招聘主管</p>
+                        <p>"智能匹配功能非常准确，帮助我们找到了很多优秀人才。"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <img src="https://via.placeholder.com/60" alt="用户头像" class="testimonial-avatar">
+                        <h5>王经理</h5>
+                        <p class="text-muted">某金融公司HR</p>
+                        <p>"数据分析功能帮助我们更好地了解招聘趋势，做出更明智的决策。"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行动召唤 -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="mb-4">准备好提升您的招聘效率了吗？</h2>
+            <p class="lead mb-4">立即体验智能简历匹配系统，让招聘更简单、更高效。</p>
+            <a href="login.html" class="btn btn-light btn-lg">免费试用</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>简历智能匹配系统</h5>
+                    <p class="text-muted">让招聘更智能，让人才更匹配</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="text-muted">© 2024 简历智能匹配系统. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

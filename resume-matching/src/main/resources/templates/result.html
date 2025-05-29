@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>匹配结果 - 简历智能匹配系统</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .header {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+        .result-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        .score-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        .score-label {
+            position: absolute;
+            bottom: 1rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h2 class="text-center">匹配结果</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="result-container">
+            <div class="score-circle">
+                <div class="score-value" th:text="${score}">85</div>
+                <div class="score-label">匹配度</div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">简历信息</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>姓名：</strong><span th:text="${resume.name}">张三</span></p>
+                    <p><strong>学历：</strong><span th:text="${resume.education}">硕士</span></p>
+                    <p><strong>工作经验：</strong><span th:text="${resume.workExperience}">3年</span></p>
+                    <p><strong>技能：</strong><span th:text="${resume.skills}">Java, Spring Boot, MySQL</span></p>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">岗位信息</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>职位：</strong><span th:text="${position.title}">Java开发工程师</span></p>
+                    <p><strong>部门：</strong><span th:text="${position.department}">技术部</span></p>
+                    <p><strong>要求：</strong><span th:text="${position.description}">3年以上Java开发经验</span></p>
+                    <p><strong>技能要求：</strong><span th:text="${position.requiredSkills}">Java, Spring Boot, MySQL</span></p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="/match" class="btn btn-primary">继续匹配</a>
+                <a href="/" class="btn btn-secondary">返回首页</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

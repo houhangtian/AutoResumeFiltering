@@ -1,0 +1,57 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /resume-matching
+
+spring:
+  application:
+    name: resume-matching
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/resume_db
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 10000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+swagger:
+  enabled: true
+  title: Resume Matching Service API
+  description: API documentation for the Resume Matching Service
+  version: 1.0.0
+
+logging:
+  level:
+    root: INFO
+    com.peopledaily: DEBUG
+  file:
+    name: logs/resume-matching.log
+    max-size: 10MB
+    max-history: 30
+
+resume-matching:
+  ml:
+    model:
+      path: models/
+      cache-size: 100
+    features:
+      skill-weight: 0.3
+      experience-weight: 0.2
+      education-weight: 0.2
+      location-weight: 0.15
+      type-weight: 0.15
+  matching:
+    threshold:
+      high: 80
+      medium: 60
+      low: 40
+    batch-size: 100
+    timeout: 30000 
